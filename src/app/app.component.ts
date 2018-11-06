@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'data-binding';
+  username: string = '';
+  btnDisabled: boolean = true;
+
+  onClickReset() {
+    this.username = '';
+    this.btnDisabled = true;
+  }
+
+  btnToggle() {
+    if (this.username === '') this.btnDisabled = true;
+    else this.btnDisabled = false;
+  }
 }
